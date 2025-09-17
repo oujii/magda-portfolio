@@ -39,27 +39,34 @@ h1, h2, h3, .hero-title, .logo {
 .top-bar {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 8px 0;
+    padding: 12px 0;
     font-size: 14px;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow);
+    text-align: center;
 }
 
 .top-bar a {
-    color: white;
+    color: #667eea;
     text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 4px 12px;
-    border-radius: 20px;
+    background: white;
+    border: 2px solid white;
+    padding: 6px 16px;
+    border-radius: 25px;
     transition: var(--transition);
+    font-weight: 500;
+    margin-left: 15px;
+    display: inline-block;
 }
 
 .top-bar a:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.9);
     text-decoration: none;
-    color: white;
+    color: #764ba2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Header */

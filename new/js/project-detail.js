@@ -53,17 +53,10 @@ function showProjectDetail(projectId) {
 function renderProjectDetail() {
     const detailContainer = document.getElementById('product-detail');
 
-    const availabilityBadge = currentProject.available
-        ? '<span class="badge badge-success">Tillgänglig</span>'
-        : '<span class="badge badge-secondary">Ej tillgänglig</span>';
-
-    const featuredBadge = currentProject.featured
-        ? '<span class="badge badge-warning ml-2">Utvalt verk</span>'
-        : '';
 
     const purchaseButton = currentProject.available
         ? `<button class="btn btn-primary btn-lg mr-3" onclick="showPurchaseModal('${currentProject.title}')">
-             💳 Köp nu - ${currentProject.price || 'Kontakta för pris'}
+             Köp nu - ${currentProject.price || 'Kontakta för pris'}
            </button>`
         : '';
 
@@ -76,7 +69,7 @@ function renderProjectDetail() {
                         <img src="${currentProject.image}"
                              alt="${currentProject.title}"
                              class="img-fluid product-main-image"
-                             onerror="this.src='data:image/svg+xml,<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"500\\" height=\\"400\\"><rect width=\\"500\\" height=\\"400\\" fill=\\"#f0f0f0\\"/><text x=\\"250\\" y=\\"200\\" text-anchor=\\"middle\\" fill=\\"#999\\" font-size=\\"24\\">Bild ej tillgänglig</text></svg>'">
+                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect width=%22500%22 height=%22400%22 fill=%22%23f0f0f0%22/%3E%3Ctext x=%22250%22 y=%22200%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2224%22%3EBild ej tillgänglig%3C/text%3E%3C/svg%3E'">
                     </div>
 
                     <!-- Thumbnail gallery could be added here for multiple images -->
@@ -91,8 +84,6 @@ function renderProjectDetail() {
                 <div class="product-info">
                     <div class="product-meta mb-2">
                         <span class="category-badge">${getCategoryName(currentProject.category)}</span>
-                        ${availabilityBadge}
-                        ${featuredBadge}
                     </div>
 
                     <h1 class="product-title">${currentProject.title}</h1>
@@ -119,7 +110,6 @@ function renderProjectDetail() {
                         <h6>Detaljer</h6>
                         <ul class="list-unstyled">
                             <li><strong>Kategori:</strong> ${getCategoryName(currentProject.category)}</li>
-                            <li><strong>Status:</strong> ${currentProject.available ? 'Tillgänglig för köp' : 'Ej tillgänglig'}</li>
                             ${currentProject.materials ? `<li><strong>Material:</strong> ${currentProject.materials}</li>` : ''}
                             ${currentProject.dimensions ? `<li><strong>Storlek:</strong> ${currentProject.dimensions}</li>` : ''}
                             ${currentProject.year ? `<li><strong>År:</strong> ${currentProject.year}</li>` : ''}
@@ -129,7 +119,7 @@ function renderProjectDetail() {
                     <div class="product-actions">
                         ${purchaseButton}
                         <button class="btn btn-outline-primary" onclick="shareProject()">
-                            📤 Dela
+                            Dela
                         </button>
 
                         <div class="action-links mt-3">
@@ -140,12 +130,12 @@ function renderProjectDetail() {
                     </div>
 
                     <div class="shipping-info mt-4 p-3 bg-light rounded">
-                        <h6>📦 Leverans & betalning</h6>
+                        <h6>Leverans & betalning</h6>
                         <ul class="list-unstyled mb-0 small">
-                            <li>✅ Gratis leverans inom Stockholm (över 500 kr)</li>
-                            <li>📮 Postförskott: +49 kr</li>
-                            <li>💳 Swish: 070-123 45 67</li>
-                            <li>📄 Faktura för företag</li>
+                            <li>Gratis leverans inom Stockholm (över 500 kr)</li>
+                            <li>Postförskott: +49 kr</li>
+                            <li>Swish: 070-123 45 67</li>
+                            <li>Faktura för företag</li>
                         </ul>
                     </div>
                 </div>
@@ -184,7 +174,7 @@ function loadRelatedProjects() {
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card related-project-card">
                 <img src="${project.image}" class="card-img-top" alt="${project.title}"
-                     onerror="this.src='data:image/svg+xml,<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"300\\" height=\\"200\\"><rect width=\\"300\\" height=\\"200\\" fill=\\"#f0f0f0\\"/><text x=\\"150\\" y=\\"100\\" text-anchor=\\"middle\\" fill=\\"#999\\">Bild saknas</text></svg>'">
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect width=%22300%22 height=%22200%22 fill=%22%23f0f0f0%22/%3E%3Ctext x=%22150%22 y=%22100%22 text-anchor=%22middle%22 fill=%22%23999%22%3EBild saknas%3C/text%3E%3C/svg%3E'">
                 <div class="card-body">
                     <h6 class="card-title">${project.title}</h6>
                     <p class="card-text small">${project.description}</p>

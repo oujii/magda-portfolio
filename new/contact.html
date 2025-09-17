@@ -26,15 +26,9 @@
 <body class="body">
     <!-- Top Bar -->
     <div id="top-bar" class="top-bar">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-md-10">
-                    <span>🎨 Nya underlägg nu tillgängliga! Handgjorda av Magda</span>
-                </div>
-                <div class="col-md-2 text-right">
-                    <a href="contact.html" class="btn btn-sm btn-light">Läs mer</a>
-                </div>
-            </div>
+        <div class="container">
+            <span>Nya underlägg nu tillgängliga! Handgjorda av Magda</span>
+            <a href="contact.html">Läs mer</a>
         </div>
     </div>
 
@@ -79,7 +73,6 @@
                                     <h3>Kontaktuppgifter</h3>
 
                                     <div class="contact-item">
-                                        <div class="contact-icon">📧</div>
                                         <div class="contact-details">
                                             <h5>E-post</h5>
                                             <a href="mailto:magda@example.com">magda@example.com</a>
@@ -87,7 +80,6 @@
                                     </div>
 
                                     <div class="contact-item">
-                                        <div class="contact-icon">📱</div>
                                         <div class="contact-details">
                                             <h5>Telefon</h5>
                                             <a href="tel:070-123-45-67">070-123 45 67</a>
@@ -95,7 +87,6 @@
                                     </div>
 
                                     <div class="contact-item">
-                                        <div class="contact-icon">📍</div>
                                         <div class="contact-details">
                                             <h5>Plats</h5>
                                             <p>Stockholm, Sverige</p>
@@ -103,7 +94,6 @@
                                     </div>
 
                                     <div class="contact-item">
-                                        <div class="contact-icon">💳</div>
                                         <div class="contact-details">
                                             <h5>Swish</h5>
                                             <p>070-123 45 67</p>
@@ -128,60 +118,6 @@
                                 </div>
                             </div>
 
-                            <!-- Contact Form -->
-                            <div class="col-md-6">
-                                <div class="contact-form-container">
-                                    <h3>Skicka meddelande</h3>
-                                    <p class="text-muted">Beskriv gärna ditt projekt eller din förfrågan så detaljerat som möjligt.</p>
-
-                                    <form id="contact-form" class="contact-form">
-                                        <div class="form-group">
-                                            <label for="name">Namn *</label>
-                                            <input type="text" id="name" name="name" class="form-control" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="email">E-post *</label>
-                                            <input type="email" id="email" name="email" class="form-control" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="phone">Telefon</label>
-                                            <input type="tel" id="phone" name="phone" class="form-control">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="subject">Ämne *</label>
-                                            <select id="subject" name="subject" class="form-control" required>
-                                                <option value="">Välj ämne</option>
-                                                <option value="purchase">Köpa befintligt verk</option>
-                                                <option value="commission">Beställa illustration</option>
-                                                <option value="collaboration">Samarbete</option>
-                                                <option value="question">Allmän fråga</option>
-                                                <option value="other">Annat</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="message">Meddelande *</label>
-                                            <textarea id="message" name="message" class="form-control" rows="5" required
-                                                placeholder="Beskriv ditt projekt, din förfrågan eller dina frågor..."></textarea>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary-custom btn-lg btn-block">
-                                            Skicka meddelande
-                                        </button>
-                                    </form>
-
-                                    <div id="form-success" class="alert alert-success mt-3" style="display: none;">
-                                        <strong>Tack!</strong> Ditt meddelande har skickats. Jag hör av mig inom kort.
-                                    </div>
-
-                                    <div id="form-error" class="alert alert-danger mt-3" style="display: none;">
-                                        <strong>Fel!</strong> Något gick fel. Skicka gärna ett e-mail direkt istället.
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </section>
 
@@ -194,7 +130,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5>🛒 Så här köper du</h5>
+                                        <h5>Så här köper du</h5>
                                         <ol>
                                             <li>Kontakta mig via formuläret eller e-post</li>
                                             <li>Beskriv vilket verk du är intresserad av</li>
@@ -204,7 +140,7 @@
                                         </ol>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5>📦 Leverans och betalning</h5>
+                                        <h5>Leverans och betalning</h5>
                                         <ul class="list-unstyled">
                                             <li><strong>Swish:</strong> 070-123 45 67</li>
                                             <li><strong>Leverans Stockholm:</strong> Gratis över 500 kr</li>
@@ -275,32 +211,5 @@
     <!-- Scripts -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
-    <script>
-        // Simple contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Simulate form submission
-            const successAlert = document.getElementById('form-success');
-            const errorAlert = document.getElementById('form-error');
-
-            // Hide any existing alerts
-            successAlert.style.display = 'none';
-            errorAlert.style.display = 'none';
-
-            // Simulate a delay
-            setTimeout(() => {
-                // In a real application, you would send the form data to a server
-                // For now, we'll just show a success message
-                successAlert.style.display = 'block';
-
-                // Reset form
-                this.reset();
-
-                // Scroll to success message
-                successAlert.scrollIntoView({ behavior: 'smooth' });
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
