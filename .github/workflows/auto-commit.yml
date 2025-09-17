@@ -1,0 +1,33 @@
+name: Auto Commit from Admin Panel
+
+on:
+  repository_dispatch:
+    types: [admin-update]
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Configure git
+      run: |
+        git config --global user.name "Magda Admin Panel"
+        git config --global user.email "admin@magdakorotynska.se"
+
+    - name: Commit changes
+      run: |
+        git add .
+        git diff --staged --quiet || git commit -m "🎨 Uppdaterat portfolio innehåll via admin-panel
+
+        Ändringarna gjordes av Magda genom admin-panelen.
+
+        🤖 Auto-commited via GitHub Actions"
+
+    - name: Push changes
+      run: |
+        git push origin main

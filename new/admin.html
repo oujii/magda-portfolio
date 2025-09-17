@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - Magda Korotynska</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&subset=latin-ext,latin&display=swap">
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-container">
+        <div class="login-card">
+            <h2>Admin Panel</h2>
+            <p>Logga in för att redigera hemsidan</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="password">Lösenord:</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Logga in</button>
+            </form>
+            <div id="login-error" class="alert alert-danger" style="display: none;">
+                Felaktigt lösenord. Försök igen.
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <h1 class="admin-title">Admin Panel</h1>
+                        <small class="text-muted">Hantera ditt portfolio</small>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="index.html" class="btn btn-outline-primary mr-2" target="_blank">Visa sida</a>
+                        <button id="publish-button-header" class="btn btn-success mr-2" onclick="publishChanges()">🚀 Publicera</button>
+                        <button class="btn btn-secondary" onclick="logout()">Logga ut</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3 admin-sidebar">
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#" onclick="showSection('dashboard')">📊 Översikt</a>
+                        <a class="nav-link" href="#" onclick="showSection('projects')">🎨 Projekt</a>
+                        <a class="nav-link" href="#" onclick="showSection('settings')">⚙️ Inställningar</a>
+                        <a class="nav-link" href="admin-help.html" target="_blank">❓ Hjälp</a>
+                    </nav>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-md-9 admin-content">
+                    <!-- Dashboard Section -->
+                    <div id="dashboard-section" class="admin-section">
+                        <h2>Översikt</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="stat-card">
+                                    <h3 id="total-projects">0</h3>
+                                    <p>Totalt projekt</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card">
+                                    <h3 id="available-projects">0</h3>
+                                    <p>Tillgängliga för köp</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card">
+                                    <h3 id="featured-projects">0</h3>
+                                    <p>Utvalda projekt</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-actions mt-4">
+                            <h4>Snabbåtgärder</h4>
+                            <button class="btn btn-primary mr-2" onclick="showSection('projects'); showAddProject()">+ Lägg till nytt projekt</button>
+                            <button class="btn btn-outline-primary mr-2" onclick="showSection('settings')">Redigera top-bar meddelande</button>
+                            <button id="publish-button" class="btn btn-success mr-2" onclick="publishChanges()">🚀 Spara & Publicera</button>
+                            <button class="btn btn-outline-secondary" onclick="exportBackup()">📥 Exportera backup</button>
+                        </div>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div id="projects-section" class="admin-section" style="display: none;">
+                        <div class="section-header">
+                            <h2>Hantera Projekt</h2>
+                            <button class="btn btn-primary" onclick="showAddProject()">+ Lägg till nytt</button>
+                        </div>
+
+                        <!-- Add/Edit Project Form -->
+                        <div id="project-form" class="project-form" style="display: none;">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 id="form-title">Lägg till nytt projekt</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="add-project-form">
+                                        <input type="hidden" id="project-id">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="project-title">Titel *</label>
+                                                    <input type="text" id="project-title" class="form-control" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="project-category">Kategori *</label>
+                                                    <select id="project-category" class="form-control" required>
+                                                        <option value="">Välj kategori</option>
+                                                        <option value="books">Böcker</option>
+                                                        <option value="maps">Kartor</option>
+                                                        <option value="magazines">Tidskrifter</option>
+                                                        <option value="ads">Grafisk Design</option>
+                                                        <option value="art">Konst</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="project-description">Beskrivning *</label>
+                                            <textarea id="project-description" class="form-control" rows="3" required></textarea>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="project-price">Pris</label>
+                                                    <input type="text" id="project-price" class="form-control" placeholder="t.ex. 150 kr">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="project-image">Bildsökväg *</label>
+                                                    <input type="text" id="project-image" class="form-control" placeholder="../content/..." required>
+                                                    <small class="form-text text-muted">Relativ sökväg till bilden</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input type="checkbox" id="project-available" class="form-check-input">
+                                                    <label for="project-available" class="form-check-label">Tillgänglig för köp</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input type="checkbox" id="project-featured" class="form-check-input">
+                                                    <label for="project-featured" class="form-check-label">Utvalt projekt</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-actions mt-3">
+                                            <button type="submit" class="btn btn-success">Spara projekt</button>
+                                            <button type="button" class="btn btn-secondary" onclick="hideProjectForm()">Avbryt</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects List -->
+                        <div id="projects-list" class="projects-list mt-4">
+                            <h4>Befintliga projekt</h4>
+                            <div id="projects-table">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div id="settings-section" class="admin-section" style="display: none;">
+                        <h2>Inställningar</h2>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Top-bar meddelande</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="topbar-form">
+                                    <div class="form-group">
+                                        <label for="topbar-text">Meddelande text</label>
+                                        <input type="text" id="topbar-text" class="form-control">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="topbar-link-text">Länktext</label>
+                                                <input type="text" id="topbar-link-text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="topbar-link-url">Länk URL</label>
+                                                <input type="text" id="topbar-link-url" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Spara ändringar</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h5>Kontaktinformation</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="contact-email">E-post</label>
+                                                <input type="email" id="contact-email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="contact-phone">Telefon</label>
+                                                <input type="text" id="contact-phone" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Spara kontaktinfo</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Help Section -->
+                    <div id="help-section" class="admin-section" style="display: none;">
+                        <h2>Hjälp & Guide</h2>
+
+                        <div class="help-content">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h5>🎨 Lägga till nytt projekt</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>Gå till "Projekt" fliken</li>
+                                        <li>Klicka på "+ Lägg till nytt"</li>
+                                        <li>Fyll i alla nödvändiga fält (märkta med *)</li>
+                                        <li>För bildsökväg, använd: <code>../content/kategori/projektnamn/bild.jpg</code></li>
+                                        <li>Klicka "Spara projekt"</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h5>📝 Redigera befintligt projekt</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>Hitta projektet i projektlistan</li>
+                                        <li>Klicka på "Redigera" knappen</li>
+                                        <li>Ändra informationen du vill uppdatera</li>
+                                        <li>Klicka "Spara projekt"</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h5>⚙️ Ändra top-bar meddelande</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>Gå till "Inställningar" fliken</li>
+                                        <li>Skriv ditt nya meddelande i textfältet</li>
+                                        <li>Ändra länktext och URL om du vill</li>
+                                        <li>Klicka "Spara ändringar"</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>🖼️ Bildformat och sökvägar</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Bildformat:</strong> JPG eller PNG rekommenderas</p>
+                                    <p><strong>Bildstorlek:</strong> Optimal bredd 800-1200px för bästa resultat</p>
+                                    <p><strong>Sökvägsexempel:</strong></p>
+                                    <ul>
+                                        <li>Böcker: <code>../content/books/boknamn/bild.jpg</code></li>
+                                        <li>Kartor: <code>../content/maps/kartnamn/bild.jpg</code></li>
+                                        <li>Tidskrifter: <code>../content/magazines/tidskrift/bild.jpg</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script src="js/admin.js"></script>
+    <script src="js/github-integration.js"></script>
+</body>
+</html>

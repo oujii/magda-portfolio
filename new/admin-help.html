@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Hjälp - Magda Korotynska</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h2>🎨 Admin Panel - Komplett Guide för Magda</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="help-section">
+                            <h3>🚀 Så här publicerar du ändringar</h3>
+                            <div class="alert alert-success">
+                                <h5>VIKTIGT: En-knapp-publicering!</h5>
+                                <ol>
+                                    <li>Gör dina ändringar (lägg till projekt, ändra text, etc.)</li>
+                                    <li>Tryck på den stora <strong>"🚀 Spara & Publicera"</strong> knappen</li>
+                                    <li>Vänta 2-3 minuter - hemsidan uppdateras automatiskt!</li>
+                                </ol>
+                                <p><strong>Du behöver ALDRIG använda kommandon eller GitHub direkt!</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="help-section">
+                            <h3>📝 Lägga till nytt projekt</h3>
+                            <ol>
+                                <li>Gå till <strong>"Projekt"</strong> fliken</li>
+                                <li>Klicka <strong>"+ Lägg till nytt"</strong></li>
+                                <li>Fyll i:
+                                    <ul>
+                                        <li><strong>Titel:</strong> Namnet på ditt verk</li>
+                                        <li><strong>Kategori:</strong> Böcker, Kartor, etc.</li>
+                                        <li><strong>Beskrivning:</strong> Beskriv verket</li>
+                                        <li><strong>Pris:</strong> t.ex. "150 kr" eller "Ej till salu"</li>
+                                        <li><strong>Bildsökväg:</strong> Se guide nedan</li>
+                                    </ul>
+                                </li>
+                                <li>Klicka <strong>"Spara projekt"</strong></li>
+                                <li>Klicka <strong>"🚀 Publicera"</strong> för att uppdatera hemsidan</li>
+                            </ol>
+                        </div>
+
+                        <div class="help-section">
+                            <h3>🖼️ Bildhantering - VIKTIGT!</h3>
+                            <div class="alert alert-warning">
+                                <h5>Så här lägger du till bilder:</h5>
+                                <ol>
+                                    <li>Placera din bild i rätt mapp:
+                                        <ul>
+                                            <li><code>content/books/ditt-projekt-namn/bild.jpg</code></li>
+                                            <li><code>content/maps/ditt-projekt-namn/bild.jpg</code></li>
+                                            <li>etc.</li>
+                                        </ul>
+                                    </li>
+                                    <li>I admin-panelen, skriv sökvägen:
+                                        <ul>
+                                            <li><code>../content/books/ditt-projekt-namn/bild.jpg</code></li>
+                                        </ul>
+                                    </li>
+                                    <li>Kom ihåg <strong>../</strong> i början!</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="help-section">
+                            <h3>📢 Ändra top-bar meddelande</h3>
+                            <ol>
+                                <li>Gå till <strong>"Inställningar"</strong> fliken</li>
+                                <li>Ändra texten under <strong>"Top-bar meddelande"</strong></li>
+                                <li>Ändra länktext och URL om du vill</li>
+                                <li>Klicka <strong>"Spara ändringar"</strong></li>
+                                <li>Klicka <strong>"🚀 Publicera"</strong></li>
+                            </ol>
+                        </div>
+
+                        <div class="help-section">
+                            <h3>🔧 Felsökning</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Problem: Bilden visas inte</h5>
+                                    <ul>
+                                        <li>Kontrollera att sökvägen börjar med <code>../</code></li>
+                                        <li>Kontrollera stavning av filnamn</li>
+                                        <li>Bildformat: JPG eller PNG</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Problem: Ändringar syns inte</h5>
+                                    <ul>
+                                        <li>Tryck på <strong>"🚀 Publicera"</strong> knappen</li>
+                                        <li>Vänta 2-3 minuter</li>
+                                        <li>Uppdatera webbläsaren (F5)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="help-section">
+                            <h3>💾 Säkerhetskopior</h3>
+                            <div class="alert alert-info">
+                                <h5>Automatiska säkerhetskopior</h5>
+                                <p>Systemet sparar automatiskt säkerhetskopior av dina ändringar.</p>
+                                <ul>
+                                    <li>Klicka <strong>"📥 Exportera backup"</strong> för manuell backup</li>
+                                    <li>Spara filen på din dator</li>
+                                    <li>Gör backup innan stora ändringar</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="help-section">
+                            <h3>📞 Teknisk support</h3>
+                            <div class="alert alert-primary">
+                                <p><strong>Om något inte fungerar:</strong></p>
+                                <ol>
+                                    <li>Försök logga ut och in igen</li>
+                                    <li>Exportera en backup först</li>
+                                    <li>Kontakta Carl för teknisk hjälp</li>
+                                </ol>
+                                <p><strong>Lösenord:</strong> <code>magda2024</code></p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="admin.html" class="btn btn-primary btn-lg">Tillbaka till Admin Panel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

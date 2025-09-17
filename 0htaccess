@@ -1,0 +1,26 @@
+# Redirect HTTPS to HTTP
+RewriteEngine on
+RewriteCond %{HTTPS} on 
+RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+
+
+
+
+
+
+

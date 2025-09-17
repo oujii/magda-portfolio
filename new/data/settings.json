@@ -1,0 +1,21 @@
+{
+  "topBar": {
+    "text": "🎨 Nya underlägg nu tillgängliga! Handgjorda av Magda",
+    "linkText": "Läs mer",
+    "linkUrl": "contact.html"
+  },
+  "contact": {
+    "email": "magda@example.com",
+    "phone": "070-123 45 67",
+    "address": "Stockholm, Sverige"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/magda.korotynska",
+    "instagram": "https://www.instagram.com/magdakorotynska/"
+  },
+  "purchase": {
+    "swish": "070-123 45 67",
+    "email": "magda@example.com",
+    "instructions": "Alla verk är handgjorda och unika. Priser varierar beroende på storlek och material. Kontakta mig för mer information om leverans och betalning."
+  }
+}

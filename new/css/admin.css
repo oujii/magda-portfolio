@@ -1,0 +1,444 @@
+/* Admin Panel Styling */
+
+:root {
+    --admin-primary: #3498db;
+    --admin-secondary: #2c3e50;
+    --admin-success: #27ae60;
+    --admin-danger: #e74c3c;
+    --admin-warning: #f39c12;
+    --admin-light: #ecf0f1;
+    --admin-dark: #34495e;
+    --border-radius: 8px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Login Screen */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h2 {
+    color: var(--admin-secondary);
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Admin Header */
+.admin-header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.admin-title {
+    color: var(--admin-secondary);
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 20px 0;
+    height: fit-content;
+    box-shadow: var(--shadow);
+}
+
+.admin-sidebar .nav-link {
+    color: var(--admin-dark);
+    padding: 15px 20px;
+    border-radius: 0;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background: var(--admin-light);
+    color: var(--admin-primary);
+    border-left-color: var(--admin-primary);
+}
+
+/* Admin Content */
+.admin-content {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    min-height: 600px;
+}
+
+.admin-section h2 {
+    color: var(--admin-secondary);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Statistics Cards */
+.stat-card {
+    background: linear-gradient(135deg, var(--admin-primary) 0%, #5dade2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+.stat-card p {
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Quick Actions */
+.quick-actions {
+    background: var(--admin-light);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--admin-primary);
+}
+
+.quick-actions h4 {
+    color: var(--admin-secondary);
+    margin-bottom: 20px;
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--admin-light);
+}
+
+/* Project Form */
+.project-form {
+    margin-bottom: 30px;
+}
+
+.project-form .card {
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.project-form .card-header {
+    background: var(--admin-primary);
+    color: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.form-actions {
+    padding-top: 20px;
+    border-top: 1px solid var(--admin-light);
+}
+
+/* Projects Table */
+.projects-table {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--admin-light);
+    transition: var(--transition);
+}
+
+.project-row:hover {
+    background: #f8f9fa;
+}
+
+.project-row:last-child {
+    border-bottom: none;
+}
+
+.project-image {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-title {
+    font-weight: 500;
+    color: var(--admin-secondary);
+    margin: 0 0 5px 0;
+}
+
+.project-meta {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.project-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.status-available {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-unavailable {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-featured {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background: var(--admin-light);
+    color: var(--admin-secondary);
+    font-weight: 500;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* Buttons */
+.btn {
+    border-radius: var(--border-radius);
+    padding: 8px 20px;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background: var(--admin-primary);
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background: var(--admin-success);
+}
+
+.btn-success:hover {
+    background: #229954;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: var(--admin-danger);
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    transform: translateY(-1px);
+}
+
+.btn-sm {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--admin-primary);
+    border-color: var(--admin-primary);
+}
+
+/* Help Content */
+.help-content {
+    max-width: 800px;
+}
+
+.help-content .card-header h5 {
+    margin: 0;
+    color: var(--admin-secondary);
+}
+
+.help-content code {
+    background: var(--admin-light);
+    color: var(--admin-primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Alerts */
+.alert {
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-content {
+        padding: 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .project-actions {
+        justify-content: center;
+    }
+
+    .admin-title {
+        font-size: 1.4rem;
+    }
+
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Loading States */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--admin-primary);
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--admin-light);
+    border-radius: 50%;
+    border-top: 3px solid var(--admin-primary);
+    animation: spin 1s linear infinite;
+    margin-left: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success Messages */
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--admin-success);
+    color: white;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "stockholm-gamla-stan",
+    "title": "Stockholm - Gamla Stan",
+    "description": "En vacker illustration av Stockholms gamla stad med alla dess historiska byggnader och gränder.",
+    "category": "maps",
+    "image": "../content/shop/stockholm-gamla-stan/01-affisch-72dpi.jpg",
+    "price": "350 kr",
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": "simsalabims-stockholm-abc",
+    "title": "Simsalabims Stockholm ABC",
+    "description": "En rolig och pedagogisk bok som lär barn om Stockholm genom alfabetet.",
+    "category": "books",
+    "image": "../content/books/simsalabims-stockholms-abc/H-simsalabims-stockholms-abc.jpg",
+    "price": "180 kr",
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": "landskapsblommor",
+    "title": "Sveriges Landskapsblommor",
+    "description": "En samling av alla Sveriges landskapsblommor i vackra illustrationer.",
+    "category": "maps",
+    "image": "../content/shop/landskapsblommor/01-sveriges-blommor-affisch-72.jpg",
+    "price": "295 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "konstapel-katt",
+    "title": "Konstapel Katt Kräver Kakor",
+    "description": "En charmig barnbok om en katt som arbetar som polis och älskar kakor.",
+    "category": "books",
+    "image": "../content/books/konstapel-katt-kraver-kakor/H-konstapel-katt-kraver-kakor.jpg",
+    "price": "165 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "misjas-bocker",
+    "title": "Misjas Böcker",
+    "description": "En samling av illustrationer och berättelser av Missja.",
+    "category": "books",
+    "image": "../content/books/misjas-bocker/H-misjas-bocker.jpg",
+    "price": "145 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "surfing-the-hills",
+    "title": "Surfing the Hills",
+    "description": "En unik bok om skidåkning med moderna illustrationer och design.",
+    "category": "books",
+    "image": "../content/books/surfing-the-hills/surfing-the-hills-cover.jpg",
+    "price": "220 kr",
+    "available": true,
+    "featured": true
+  },
+  {
+    "id": "kungen-naktergalen",
+    "title": "Kungen och Näktergalen",
+    "description": "En klassisk saga återberättad med vackra illustrationer.",
+    "category": "books",
+    "image": "../content/books/kungen-o-naktergalen/kungen-och-n-omslag.jpg",
+    "price": "175 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "forskning-framsteg",
+    "title": "Forskning & Framsteg",
+    "description": "Illustrationer för den populärvetenskapliga tidskriften Forskning & Framsteg.",
+    "category": "magazines",
+    "image": "../content/magazines/forskning-framsteg/H-forskning-framsteg.jpg",
+    "price": "Ej till salu",
+    "available": false,
+    "featured": false
+  },
+  {
+    "id": "farmor-valle-papua",
+    "title": "Farmor och Valle reser till Papua Nya Guinea",
+    "description": "En spännande berättelse om en resa till exotiska Papua Nya Guinea.",
+    "category": "books",
+    "image": "../content/books/farmor-och-valle-reser-till-papua-nya-guinea/H-farmor-och-valle-reser-till-papua-nya-guinea.jpg",
+    "price": "155 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "lilla-bakboken",
+    "title": "Lilla Bakboken",
+    "description": "En liten men innehållsrik bakbok med enkla och goda recept.",
+    "category": "books",
+    "image": "../content/books/lilla-bakboken/H-lilla-bakboken.jpg",
+    "price": "125 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "leo-majken",
+    "title": "Leo & Majken",
+    "description": "Illustrationer för tidskriften Leo & Majken.",
+    "category": "magazines",
+    "image": "../content/magazines/leo-majken/H-leo-majken.jpg",
+    "price": "Ej till salu",
+    "available": false,
+    "featured": false
+  },
+  {
+    "id": "maps-collection",
+    "title": "Kartsamling",
+    "description": "En samling av olika kartor och geografiska illustrationer.",
+    "category": "maps",
+    "image": "../content/maps/H-maps.jpg",
+    "price": "Varierar",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "moderna-tider",
+    "title": "Moderna Tider",
+    "description": "Konstnärliga bidrag till tidskriften Moderna Tider.",
+    "category": "magazines",
+    "image": "../content/magazines/moderna-tider/H-moderna-tider.jpg",
+    "price": "Ej till salu",
+    "available": false,
+    "featured": false
+  },
+  {
+    "id": "arts-collection",
+    "title": "Konstnärliga Verk",
+    "description": "En samling av fria konstnärliga verk och illustrationer.",
+    "category": "art",
+    "image": "../content/arts/H-arts.jpg",
+    "price": "Varierar",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "akestam-holst",
+    "title": "Åkestam Holst Reklambyrå",
+    "description": "Grafisk design och reklamarbete för Åkestam Holst.",
+    "category": "ads",
+    "image": "../content/graphic-design/akestam-holst-reklambyra/H-akestam-holst-reklambyra.jpg",
+    "price": "Ej till salu",
+    "available": false,
+    "featured": false
+  }
+]

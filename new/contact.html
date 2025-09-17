@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt - Magda Korotynska</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&subset=latin-ext,latin&display=swap">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'sv',
+                includedLanguages: 'sv,en,de,fr,es',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="body">
+    <!-- Top Bar -->
+    <div id="top-bar" class="top-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-10">
+                    <span>🎨 Nya underlägg nu tillgängliga! Handgjorda av Magda</span>
+                </div>
+                <div class="col-md-2 text-right">
+                    <a href="contact.html" class="btn btn-sm btn-light">Läs mer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <a class="logo" href="index.html">Magda Korotynska</a>
+                </div>
+                <div class="col-6 text-right">
+                    <nav class="main-nav">
+                        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                        <a href="me.html" class="nav-link">Om mig</a>
+                        <a href="contact.html" class="nav-link active">Kontakt</a>
+                        <div id="google_translate_element" class="translate-widget"></div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <section class="contact-section">
+                        <h1 class="section-title">Kontakt</h1>
+
+                        <div class="contact-intro text-center mb-5">
+                            <p class="lead">
+                                Har du frågor om mina verk eller vill diskutera ett projekt?
+                                Jag hör gärna från dig!
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <!-- Contact Information -->
+                            <div class="col-md-6">
+                                <div class="contact-info">
+                                    <h3>Kontaktuppgifter</h3>
+
+                                    <div class="contact-item">
+                                        <div class="contact-icon">📧</div>
+                                        <div class="contact-details">
+                                            <h5>E-post</h5>
+                                            <a href="mailto:magda@example.com">magda@example.com</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <div class="contact-icon">📱</div>
+                                        <div class="contact-details">
+                                            <h5>Telefon</h5>
+                                            <a href="tel:070-123-45-67">070-123 45 67</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <div class="contact-icon">📍</div>
+                                        <div class="contact-details">
+                                            <h5>Plats</h5>
+                                            <p>Stockholm, Sverige</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <div class="contact-icon">💳</div>
+                                        <div class="contact-details">
+                                            <h5>Swish</h5>
+                                            <p>070-123 45 67</p>
+                                            <small class="text-muted">För direktbetalning av mindre beställningar</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Social Media -->
+                                <div class="social-media mt-4">
+                                    <h4>Följ mitt arbete</h4>
+                                    <div class="social-links-large">
+                                        <a href="https://www.facebook.com/magda.korotynska" target="_blank" class="social-link">
+                                            <img src="../assets/img/web/ico_fb.svg" alt="Facebook">
+                                            <span>Facebook</span>
+                                        </a>
+                                        <a href="https://www.instagram.com/magdakorotynska/" target="_blank" class="social-link">
+                                            <img src="../assets/img/web/ico_insta.svg" alt="Instagram">
+                                            <span>Instagram</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Form -->
+                            <div class="col-md-6">
+                                <div class="contact-form-container">
+                                    <h3>Skicka meddelande</h3>
+                                    <p class="text-muted">Beskriv gärna ditt projekt eller din förfrågan så detaljerat som möjligt.</p>
+
+                                    <form id="contact-form" class="contact-form">
+                                        <div class="form-group">
+                                            <label for="name">Namn *</label>
+                                            <input type="text" id="name" name="name" class="form-control" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="email">E-post *</label>
+                                            <input type="email" id="email" name="email" class="form-control" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="phone">Telefon</label>
+                                            <input type="tel" id="phone" name="phone" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="subject">Ämne *</label>
+                                            <select id="subject" name="subject" class="form-control" required>
+                                                <option value="">Välj ämne</option>
+                                                <option value="purchase">Köpa befintligt verk</option>
+                                                <option value="commission">Beställa illustration</option>
+                                                <option value="collaboration">Samarbete</option>
+                                                <option value="question">Allmän fråga</option>
+                                                <option value="other">Annat</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="message">Meddelande *</label>
+                                            <textarea id="message" name="message" class="form-control" rows="5" required
+                                                placeholder="Beskriv ditt projekt, din förfrågan eller dina frågor..."></textarea>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary-custom btn-lg btn-block">
+                                            Skicka meddelande
+                                        </button>
+                                    </form>
+
+                                    <div id="form-success" class="alert alert-success mt-3" style="display: none;">
+                                        <strong>Tack!</strong> Ditt meddelande har skickats. Jag hör av mig inom kort.
+                                    </div>
+
+                                    <div id="form-error" class="alert alert-danger mt-3" style="display: none;">
+                                        <strong>Fel!</strong> Något gick fel. Skicka gärna ett e-mail direkt istället.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Purchase Information -->
+                    <section class="purchase-info mt-5">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Information om köp</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>🛒 Så här köper du</h5>
+                                        <ol>
+                                            <li>Kontakta mig via formuläret eller e-post</li>
+                                            <li>Beskriv vilket verk du är intresserad av</li>
+                                            <li>Vi diskuterar pris, storlek och leverans</li>
+                                            <li>Betalning via Swish eller faktura</li>
+                                            <li>Leverans inom Stockholm eller postförskott</li>
+                                        </ol>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>📦 Leverans och betalning</h5>
+                                        <ul class="list-unstyled">
+                                            <li><strong>Swish:</strong> 070-123 45 67</li>
+                                            <li><strong>Leverans Stockholm:</strong> Gratis över 500 kr</li>
+                                            <li><strong>Postförskott:</strong> +49 kr</li>
+                                            <li><strong>Hämtning:</strong> Efter överenskommelse</li>
+                                            <li><strong>Faktura:</strong> För företag (30 dagars betalning)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 p-3 bg-light rounded">
+                                    <small class="text-muted">
+                                        <strong>OBS:</strong> Alla verk är handgjorda och unika. Priser varierar beroende på storlek,
+                                        material och komplexitet. Leveranstid är normalt 1-2 veckor för befintliga verk och
+                                        2-4 veckor för beställningsarbeten.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FAQ -->
+                    <section class="faq-section mt-5">
+                        <h3>Vanliga frågor</h3>
+                        <div class="faq-grid">
+                            <div class="faq-item">
+                                <h5>Kan jag beställa en specialillustration?</h5>
+                                <p>Ja, jag tar gärna emot uppdrag för specialillustrationer. Kontakta mig för att diskutera ditt projekt och få en offert.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h5>Vad kostar en illustration?</h5>
+                                <p>Priserna varierar beroende på komplexitet, storlek och tidsåtgång. Enkla illustrationer från 1500 kr, större projekt efter överenskommelse.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h5>Hur lång tid tar en beställning?</h5>
+                                <p>Befintliga verk skickas inom 1-2 veckor. Specialbeställningar tar normalt 2-4 veckor beroende på komplexitet.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h5>Finns verken i olika storlekar?</h5>
+                                <p>Ja, de flesta illustrationer kan tryckas i olika storlekar. Kontakta mig för att diskutera alternativen.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Magda Korotynska. Alla rättigheter förbehållna.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/magda.korotynska" target="_blank">
+                            <img src="../assets/img/web/ico_fb.svg" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/magdakorotynska/" target="_blank">
+                            <img src="../assets/img/web/ico_insta.svg" alt="Instagram" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script>
+        // Simple contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simulate form submission
+            const successAlert = document.getElementById('form-success');
+            const errorAlert = document.getElementById('form-error');
+
+            // Hide any existing alerts
+            successAlert.style.display = 'none';
+            errorAlert.style.display = 'none';
+
+            // Simulate a delay
+            setTimeout(() => {
+                // In a real application, you would send the form data to a server
+                // For now, we'll just show a success message
+                successAlert.style.display = 'block';
+
+                // Reset form
+                this.reset();
+
+                // Scroll to success message
+                successAlert.scrollIntoView({ behavior: 'smooth' });
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
