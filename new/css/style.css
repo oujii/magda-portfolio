@@ -531,6 +531,107 @@ h1, h2, h3, .hero-title, .logo {
     padding: 40px 0;
 }
 
+.contact-info-modern {
+    margin-top: 20px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    height: 100%;
+    border-left: 4px solid var(--primary-color);
+}
+
+.contact-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.contact-method {
+    margin-bottom: 20px;
+}
+
+.contact-method:last-child {
+    margin-bottom: 0;
+}
+
+.contact-method strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-method span,
+.contact-link {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.contact-link {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.contact-method small {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    margin-top: 3px;
+}
+
+.social-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid var(--light-bg);
+}
+
+.social-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.social-links-modern {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-link-modern {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.social-link-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.social-link-modern img {
+    width: 20px;
+    height: 20px;
+}
+
 .contact-intro .lead {
     font-size: 1.3rem;
     color: var(--secondary-color);

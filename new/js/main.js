@@ -58,7 +58,6 @@ function createProjectCard(project) {
                 <p class="portfolio-description">${project.description}</p>
                 <div class="portfolio-actions">
                     <a href="#" class="btn-primary-custom" onclick="showProjectDetails('${project.id}')">Se mer</a>
-                    <button class="btn-purchase" onclick="showPurchaseModal('${project.title}')">Köp</button>
                 </div>
             </div>
         </div>

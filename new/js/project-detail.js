@@ -76,9 +76,9 @@ function renderProjectDetail() {
                     ${currentProject.images && currentProject.images.length > 1 ? `
                         <div class="thumbnail-gallery">
                             <div class="row">
-                                ${currentProject.images.slice(1).map((img, index) => `
+                                ${currentProject.images.map((img, index) => `
                                     <div class="col-3 mb-2">
-                                        <img src="${img}" alt="${currentProject.title} ${index + 2}"
+                                        <img src="${img}" alt="${currentProject.title} ${index + 1}"
                                              class="img-fluid thumbnail-image"
                                              onclick="changeMainImage('${img}')"
                                              style="cursor: pointer; border-radius: 4px;">

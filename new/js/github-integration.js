@@ -58,23 +58,119 @@ class GitHubIntegration {
         }
     }
 
-    // Simulate commit (for demo purposes)
+    // Save changes using Netlify Function
     async simulateCommit(message) {
-        // In a real implementation, this would:
-        // 1. Send data to a backend service
-        // 2. Backend service commits to GitHub using a token
-        // 3. GitHub Actions trigger automatically
+        try {
+            // Check if we're running on Netlify
+            const isNetlify = window.location.hostname.includes('netlify.app') ||
+                             window.location.hostname.includes('netlify.com');
 
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Simulate success 90% of the time
-                if (Math.random() > 0.1) {
-                    resolve({ success: true });
-                } else {
-                    reject(new Error('Simulated network error'));
-                }
-            }, 2000);
+            if (isNetlify) {
+                return await this.saveViaNetlifyFunction(message);
+            } else {
+                // Fallback to download method for local development
+                return await this.saveProjectsToFile();
+            }
+        } catch (error) {
+            throw new Error('Kunde inte spara filer: ' + error.message);
+        }
+    }
+
+    // Save via Netlify Function
+    async saveViaNetlifyFunction(message) {
+        const response = await fetch('/.netlify/functions/update-site', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                projects: window.projects,
+                settings: window.settings,
+                message: message || 'Uppdatering från admin-panel'
+            })
         });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        if (!result.success) {
+            throw new Error(result.error || 'Okänt fel');
+        }
+
+        return { success: true };
+    }
+
+    // Save projects to the actual JSON file
+    async saveProjectsToFile() {
+        if (typeof window.projects !== 'undefined') {
+            const projectsJson = JSON.stringify(window.projects, null, 2);
+
+            // Create a downloadable backup first
+            this.downloadFile('projects.json', projectsJson);
+
+            // For now, we'll show instructions to manually replace the file
+            this.showFileUpdateInstructions();
+        }
+    }
+
+    // Save settings to HTML files
+    async saveSettingsToFiles() {
+        if (typeof window.settings !== 'undefined') {
+            const settingsJson = JSON.stringify(window.settings, null, 2);
+            this.downloadFile('settings-backup.json', settingsJson);
+        }
+    }
+
+    // Download a file with the new content
+    downloadFile(filename, content) {
+        const blob = new Blob([content], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    // Show instructions for manual file update
+    showFileUpdateInstructions() {
+        const instructions = `
+            <div class="alert alert-warning mt-3">
+                <h5>⚠️ Manuell uppdatering krävs</h5>
+                <p><strong>Admin-panelen kan inte automatiskt pusha till GitHub ännu.</strong></p>
+                <p>Dina ändringar har sparats lokalt och en backup-fil har laddats ner.</p>
+
+                <h6>För att aktivera ändringarna:</h6>
+                <ol>
+                    <li>Kopiera innehållet från den nedladdade <code>projects.json</code></li>
+                    <li>Ersätt innehållet i <code>/new/data/projects.json</code> med Claude Code</li>
+                    <li>Pusha ändringarna till GitHub</li>
+                </ol>
+
+                <div class="alert alert-info mt-2">
+                    <strong>💡 Tips:</strong> Du kan också be mig (Claude) att göra ändringarna direkt åt dig -
+                    det är för tillfället snabbare än admin-panelen.
+                </div>
+
+                <p><small><strong>Framtida lösning:</strong> Vi kan skapa en backend-webhook som automatiskt pushar ändringarna.</small></p>
+            </div>
+        `;
+
+        // Add instructions to the page
+        const container = document.querySelector('.admin-container') || document.body;
+        const instructionsDiv = document.createElement('div');
+        instructionsDiv.innerHTML = instructions;
+        container.appendChild(instructionsDiv);
+
+        // Remove after 15 seconds
+        setTimeout(() => {
+            instructionsDiv.remove();
+        }, 15000);
     }
 
     // Save to localStorage as backup
