@@ -1,152 +1,323 @@
 [
   {
-    "id": "stockholm-gamla-stan",
-    "title": "Stockholm - Gamla Stan",
-    "description": "En vacker illustration av Stockholms gamla stad med alla dess historiska byggnader och gränder.",
-    "category": "maps",
-    "image": "../content/shop/stockholm-gamla-stan/01-affisch-72dpi.jpg",
-    "price": "350 kr",
-    "available": true,
-    "featured": true
-  },
-  {
-    "id": "simsalabims-stockholm-abc",
+    "id": "simsalabims-stockholms-abc",
     "title": "Simsalabims Stockholm ABC",
-    "description": "En rolig och pedagogisk bok som lär barn om Stockholm genom alfabetet.",
+    "subtitle": "Bonnier Carlsen 1994, 2000, En bok för alla 2009, 2016",
+    "description": "En rolig och pedagogisk bok som lär barn om Stockholm genom alfabetet. Magda Korotynskas och Rod Bengtssons Stockholm ABC är utan konkurrens den Stockholmsbok jag läser flest gånger.",
+    "longDescription": "\"Magda Korotynskas and Rod Bengtsson's Stockholm ABC is without competition the Stockholm Book I read most times. We have a worn copy, sorted out from Medborgarplatsen's library, which offers many excursions directly from the bed to Gärdet, Hötorget, Millesgården and Hornsgatan.\"\n\nClaes Sjödin, DN",
     "category": "books",
-    "image": "../content/books/simsalabims-stockholms-abc/H-simsalabims-stockholms-abc.jpg",
+    "image": "../content/books/simsalabims-stockholms-abc/H1-simsalabims-stockholms-abc.jpg",
+    "images": [
+      "../content/books/simsalabims-stockholms-abc/H1-simsalabims-stockholms-abc.jpg",
+      "../content/books/simsalabims-stockholms-abc/01-simsalabims-stockholms-abc.jpg",
+      "../content/books/simsalabims-stockholms-abc/02-simsalabims-stockholms-abc.jpg",
+      "../content/books/simsalabims-stockholms-abc/03-simsalabims-stockholms-abc.jpg",
+      "../content/books/simsalabims-stockholms-abc/04-simsalabims-stockholms-abc.jpg"
+    ],
     "price": "180 kr",
     "available": true,
     "featured": true
   },
   {
-    "id": "landskapsblommor",
-    "title": "Sveriges Landskapsblommor",
-    "description": "En samling av alla Sveriges landskapsblommor i vackra illustrationer.",
-    "category": "maps",
-    "image": "../content/shop/landskapsblommor/01-sveriges-blommor-affisch-72.jpg",
-    "price": "295 kr",
+    "id": "konstapel-katt-kraver-kakor",
+    "title": "Constable Cat Requires Cookies",
+    "subtitle": "by Carl Johan De Geer, Bonnier Carlsen, 2000",
+    "description": "En charmig barnbok om en katt som arbetar som polis och älskar kakor.",
+    "longDescription": "\"... a charmingly told trifle over which rests a homely aroma of freshly baked cookies. It appeals to the cook lover at least as much.\" Lena Kåreland, Svenska Dagbladet, 2001\n\nTure Sventon Awarded 2001 - Temmelburken",
+    "category": "books",
+    "image": "../content/books/konstapel-katt-kraver-kakor/H1-konstapel-katt-kraver-kakor.jpg",
+    "images": [
+      "../content/books/konstapel-katt-kraver-kakor/H1-konstapel-katt-kraver-kakor.jpg",
+      "../content/books/konstapel-katt-kraver-kakor/01-konstapel-katt-kraver-kakor.jpg",
+      "../content/books/konstapel-katt-kraver-kakor/02-konstapel-katt-kraver-kakor.jpg",
+      "../content/books/konstapel-katt-kraver-kakor/03-konstapel-katt-kraver-kakor.jpg",
+      "../content/books/konstapel-katt-kraver-kakor/04-konstapel-katt-kraver-kakor.jpg"
+    ],
+    "price": "165 kr",
+    "available": true,
+    "featured": false,
+    "awards": ["Ture Sventon Awarded 2001 - Temmelburken"]
+  },
+  {
+    "id": "surfing-the-hills",
+    "title": "Surfing the Hills",
+    "subtitle": "by Carl Johan De Geer, Bonnier Carlsen, 1997",
+    "description": "En unik bok om skidåkning med moderna illustrationer och design.",
+    "longDescription": "A ski book that won the Bologna Ragazzi Award for Non-fiction in 1998.",
+    "category": "books",
+    "image": "../content/books/surfing-the-hills/H1-surfing-the-hills.jpg",
+    "images": [
+      "../content/books/surfing-the-hills/H1-surfing-the-hills.jpg",
+      "../content/books/surfing-the-hills/01-surfing-the-hills.jpg",
+      "../content/books/surfing-the-hills/02-surfing-the-hills.jpg",
+      "../content/books/surfing-the-hills/03-surfing-the-hills.jpg"
+    ],
+    "price": "220 kr",
+    "available": true,
+    "featured": true,
+    "awards": ["Bologna Ragazzi Award for Non-fiction 1998"]
+  },
+  {
+    "id": "farmor-och-valle-reser-till-papua-nya-guinea",
+    "title": "Grandma and Valle travel to Papua New Guinea",
+    "subtitle": "by Carl Johan De Geer, Bonnier Carlsen, 1999",
+    "description": "En spännande berättelse om en resa till exotiska Papua Nya Guinea.",
+    "category": "books",
+    "image": "../content/books/farmor-och-valle-reser-till-papua-nya-guinea/H1-farmor-och-valle-reser-till-papua-nya-guinea.jpg",
+    "images": [
+      "../content/books/farmor-och-valle-reser-till-papua-nya-guinea/H1-farmor-och-valle-reser-till-papua-nya-guinea.jpg",
+      "../content/books/farmor-och-valle-reser-till-papua-nya-guinea/01-farmor-och-valle-reser-till-papua-nya-guinea.jpg",
+      "../content/books/farmor-och-valle-reser-till-papua-nya-guinea/02-farmor-och-valle-reser-till-papua-nya-guinea.jpg",
+      "../content/books/farmor-och-valle-reser-till-papua-nya-guinea/03-farmor-och-valle-reser-till-papua-nya-guinea.jpg"
+    ],
+    "price": "155 kr",
     "available": true,
     "featured": false
   },
   {
-    "id": "konstapel-katt",
-    "title": "Konstapel Katt Kräver Kakor",
-    "description": "En charmig barnbok om en katt som arbetar som polis och älskar kakor.",
+    "id": "kungen-o-naktergalen",
+    "title": "The King and the Nightingale",
+    "subtitle": "by Hans Christian Andersen, Bonnier Carlsen, 1995",
+    "description": "En klassisk saga återberättad med vackra illustrationer.",
     "category": "books",
-    "image": "../content/books/konstapel-katt-kraver-kakor/H-konstapel-katt-kraver-kakor.jpg",
-    "price": "165 kr",
+    "image": "../content/books/kungen-o-naktergalen/H1-kungen-och-naktergalen.jpg",
+    "images": [
+      "../content/books/kungen-o-naktergalen/H1-kungen-och-naktergalen.jpg",
+      "../content/books/kungen-o-naktergalen/01-kungen-och-naktergalen.jpg",
+      "../content/books/kungen-o-naktergalen/02-kungen-och-naktergalen.jpg",
+      "../content/books/kungen-o-naktergalen/03-kungen-och-naktergalen.jpg",
+      "../content/books/kungen-o-naktergalen/04-kungen-och-naktergalen.jpg"
+    ],
+    "price": "175 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "lilla-bakboken",
+    "title": "Little Baking Book",
+    "subtitle": "by Margareta Schildt, Bonnier Carlsen, 2001",
+    "description": "En liten men innehållsrik bakbok med enkla och goda recept.",
+    "category": "books",
+    "image": "../content/books/lilla-bakboken/H1-lilla-bakboken.jpg",
+    "images": [
+      "../content/books/lilla-bakboken/H1-lilla-bakboken.jpg",
+      "../content/books/lilla-bakboken/01-lilla-bakboken.jpg",
+      "../content/books/lilla-bakboken/02-lilla-bakboken.jpg",
+      "../content/books/lilla-bakboken/03-lilla-bakboken.jpg"
+    ],
+    "price": "125 kr",
     "available": true,
     "featured": false
   },
   {
     "id": "misjas-bocker",
-    "title": "Misjas Böcker",
+    "title": "Misjas Books",
+    "subtitle": "by Astrid Lindgren, various publishers 1982-1985",
     "description": "En samling av illustrationer och berättelser av Missja.",
     "category": "books",
-    "image": "../content/books/misjas-bocker/H-misjas-bocker.jpg",
+    "image": "../content/books/misjas-bocker/H1-misjas-bocker.jpg",
+    "images": [
+      "../content/books/misjas-bocker/H1-misjas-bocker.jpg",
+      "../content/books/misjas-bocker/01-misjas-bocker.jpg",
+      "../content/books/misjas-bocker/02-misjas-bocker.jpg",
+      "../content/books/misjas-bocker/03-misjas-bocker.jpg"
+    ],
     "price": "145 kr",
     "available": true,
     "featured": false
   },
   {
-    "id": "surfing-the-hills",
-    "title": "Surfing the Hills",
-    "description": "En unik bok om skidåkning med moderna illustrationer och design.",
+    "id": "familjen-ratzbergers-guide-till-gamla-stan",
+    "title": "The Ratzberger Family's Guide to Gamla Stan",
+    "subtitle": "by Carl Johan De Geer, Bonnier Carlsen, 2002",
+    "description": "En familjeresa genom Stockholms gamla stad med historiska fakta och roliga illustrationer.",
     "category": "books",
-    "image": "../content/books/surfing-the-hills/surfing-the-hills-cover.jpg",
-    "price": "220 kr",
+    "image": "../content/books/familjen-ratzbergers guide-till-gamla-stan/H1-familjen-ratzbergers-guide-till-gamla-stan.jpg",
+    "images": [
+      "../content/books/familjen-ratzbergers guide-till-gamla-stan/H1-familjen-ratzbergers-guide-till-gamla-stan.jpg",
+      "../content/books/familjen-ratzbergers guide-till-gamla-stan/01-familjen-ratzbergers-guide-till-gamla-stan.jpg",
+      "../content/books/familjen-ratzbergers guide-till-gamla-stan/02-familjen-ratzbergers-guide-till-gamla-stan.jpg"
+    ],
+    "price": "165 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "estelle-far-lite-skall",
+    "title": "Estelle Gets a Little Bark",
+    "subtitle": "by Ulf Stark, Bonnier Carlsen, 2012",
+    "description": "En varm berättelse om prinsessan Estelle och hennes första möte med hundar.",
+    "category": "books",
+    "image": "../content/books/estelle-far-lite-skall/H1-estelle-far-lite-skall.jpg",
+    "images": [
+      "../content/books/estelle-far-lite-skall/H1-estelle-far-lite-skall.jpg",
+      "../content/books/estelle-far-lite-skall/01-estelle-far-lite-skall.jpg",
+      "../content/books/estelle-far-lite-skall/02-estelle-far-lite-skall.jpg",
+      "../content/books/estelle-far-lite-skall/03-estelle-far-lite-skall.jpg"
+    ],
+    "price": "145 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "bla-rosen",
+    "title": "The Blue Rose",
+    "subtitle": "by Carl Johan De Geer, Bonnier Carlsen, 1996",
+    "description": "En poetisk berättelse om sökandet efter den sällsynta blå rosen.",
+    "category": "books",
+    "image": "../content/books/bla-rosen/H1-bla-rosen.jpg",
+    "images": [
+      "../content/books/bla-rosen/H1-bla-rosen.jpg",
+      "../content/books/bla-rosen/01-bla-rosen.jpg",
+      "../content/books/bla-rosen/02-bla-rosen.jpg",
+      "../content/books/bla-rosen/03-bla-rosen.jpg"
+    ],
+    "price": "155 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "bladmossor",
+    "title": "Leaf Moss",
+    "subtitle": "Illustrations for scientific publication",
+    "description": "Vetenskapliga illustrationer av bladmossor för botanisk forskning.",
+    "category": "books",
+    "image": "../content/books/bladmossor/H1-bladmossor.jpg",
+    "images": [
+      "../content/books/bladmossor/H1-bladmossor.jpg",
+      "../content/books/bladmossor/01-bladmossor.jpg",
+      "../content/books/bladmossor/02-bladmossor.jpg"
+    ],
+    "price": "Ej till salu",
+    "available": false,
+    "featured": false
+  },
+  {
+    "id": "lillan-och-raven",
+    "title": "Lillan and the Fox",
+    "subtitle": "by Carl Johan De Geer, Bonnier Carlsen, 1998",
+    "description": "En saga om vänskap mellan en liten flicka och en räv.",
+    "category": "books",
+    "image": "../content/books/lillan-och-raven/H1-lillan-och-raven.jpg",
+    "images": [
+      "../content/books/lillan-och-raven/H1-lillan-och-raven.jpg",
+      "../content/books/lillan-och-raven/01-lillan-och-raven.jpg",
+      "../content/books/lillan-och-raven/02-lillan-och-raven.jpg"
+    ],
+    "price": "140 kr",
+    "available": true,
+    "featured": false
+  },
+  {
+    "id": "stockholm-gamla-stan-map",
+    "title": "Stockholm Old Town",
+    "subtitle": "Detailed illustrated map of Gamla Stan",
+    "description": "En vacker illustration av Stockholms gamla stad med alla dess historiska byggnader och gränder.",
+    "category": "maps",
+    "image": "../content/maps/stockholm-gamla-stan/H1-stockholm-gamla-stan.jpg",
+    "images": [
+      "../content/maps/stockholm-gamla-stan/H1-stockholm-gamla-stan.jpg",
+      "../content/maps/stockholm-gamla-stan/01-stockholm-gamla-stan.jpg",
+      "../content/maps/stockholm-gamla-stan/02-stockholm-gamla-stan.jpg"
+    ],
+    "price": "350 kr",
     "available": true,
     "featured": true
   },
   {
-    "id": "kungen-naktergalen",
-    "title": "Kungen och Näktergalen",
-    "description": "En klassisk saga återberättad med vackra illustrationer.",
-    "category": "books",
-    "image": "../content/books/kungen-o-naktergalen/kungen-och-n-omslag.jpg",
-    "price": "175 kr",
+    "id": "stockholms-skargard-map",
+    "title": "Stockholm's Archipelago",
+    "subtitle": "Illustrated map of the Stockholm archipelago",
+    "description": "En detaljerad karta över Stockholms vackra skärgård med öar och skär.",
+    "category": "maps",
+    "image": "../content/maps/stockholms-skargard/H1-stockholms-skargard.jpg",
+    "images": [
+      "../content/maps/stockholms-skargard/H1-stockholms-skargard.jpg",
+      "../content/maps/stockholms-skargard/01-stockholms-skargard.jpg"
+    ],
+    "price": "295 kr",
     "available": true,
     "featured": false
   },
   {
     "id": "forskning-framsteg",
     "title": "Forskning & Framsteg",
+    "subtitle": "Illustrations for scientific magazine, various issues 1990-2010",
     "description": "Illustrationer för den populärvetenskapliga tidskriften Forskning & Framsteg.",
     "category": "magazines",
-    "image": "../content/magazines/forskning-framsteg/H-forskning-framsteg.jpg",
+    "image": "../content/magazines/forskning-framsteg/H1-forskning-framsteg.jpg",
+    "images": [
+      "../content/magazines/forskning-framsteg/H1-forskning-framsteg.jpg",
+      "../content/magazines/forskning-framsteg/01-forskning-framsteg.jpg",
+      "../content/magazines/forskning-framsteg/02-forskning-framsteg.jpg",
+      "../content/magazines/forskning-framsteg/03-forskning-framsteg.jpg"
+    ],
     "price": "Ej till salu",
     "available": false,
-    "featured": false
-  },
-  {
-    "id": "farmor-valle-papua",
-    "title": "Farmor och Valle reser till Papua Nya Guinea",
-    "description": "En spännande berättelse om en resa till exotiska Papua Nya Guinea.",
-    "category": "books",
-    "image": "../content/books/farmor-och-valle-reser-till-papua-nya-guinea/H-farmor-och-valle-reser-till-papua-nya-guinea.jpg",
-    "price": "155 kr",
-    "available": true,
-    "featured": false
-  },
-  {
-    "id": "lilla-bakboken",
-    "title": "Lilla Bakboken",
-    "description": "En liten men innehållsrik bakbok med enkla och goda recept.",
-    "category": "books",
-    "image": "../content/books/lilla-bakboken/H-lilla-bakboken.jpg",
-    "price": "125 kr",
-    "available": true,
     "featured": false
   },
   {
     "id": "leo-majken",
     "title": "Leo & Majken",
+    "subtitle": "Illustrations for children's magazine, various issues",
     "description": "Illustrationer för tidskriften Leo & Majken.",
     "category": "magazines",
-    "image": "../content/magazines/leo-majken/H-leo-majken.jpg",
+    "image": "../content/magazines/leo-majken/H1-leo-majken.jpg",
+    "images": [
+      "../content/magazines/leo-majken/H1-leo-majken.jpg",
+      "../content/magazines/leo-majken/01-leo-majken.jpg",
+      "../content/magazines/leo-majken/02-leo-majken.jpg"
+    ],
     "price": "Ej till salu",
     "available": false,
-    "featured": false
-  },
-  {
-    "id": "maps-collection",
-    "title": "Kartsamling",
-    "description": "En samling av olika kartor och geografiska illustrationer.",
-    "category": "maps",
-    "image": "../content/maps/H-maps.jpg",
-    "price": "Varierar",
-    "available": true,
     "featured": false
   },
   {
     "id": "moderna-tider",
     "title": "Moderna Tider",
+    "subtitle": "Artistic contributions to cultural magazine",
     "description": "Konstnärliga bidrag till tidskriften Moderna Tider.",
     "category": "magazines",
-    "image": "../content/magazines/moderna-tider/H-moderna-tider.jpg",
+    "image": "../content/magazines/moderna-tider/H1-moderna-tider.jpg",
+    "images": [
+      "../content/magazines/moderna-tider/H1-moderna-tider.jpg",
+      "../content/magazines/moderna-tider/01-moderna-tider.jpg"
+    ],
     "price": "Ej till salu",
     "available": false,
     "featured": false
   },
   {
-    "id": "arts-collection",
-    "title": "Konstnärliga Verk",
-    "description": "En samling av fria konstnärliga verk och illustrationer.",
-    "category": "art",
-    "image": "../content/arts/H-arts.jpg",
-    "price": "Varierar",
-    "available": true,
-    "featured": false
-  },
-  {
-    "id": "akestam-holst",
-    "title": "Åkestam Holst Reklambyrå",
+    "id": "akestam-holst-reklambyra",
+    "title": "Åkestam Holst Advertising Agency",
+    "subtitle": "Graphic design and advertising work",
     "description": "Grafisk design och reklamarbete för Åkestam Holst.",
     "category": "ads",
-    "image": "../content/graphic-design/akestam-holst-reklambyra/H-akestam-holst-reklambyra.jpg",
+    "image": "../content/graphic-design/akestam-holst-reklambyra/H1-akestam-holst-reklambyra.jpg",
+    "images": [
+      "../content/graphic-design/akestam-holst-reklambyra/H1-akestam-holst-reklambyra.jpg",
+      "../content/graphic-design/akestam-holst-reklambyra/01-akestam-holst-reklambyra.jpg",
+      "../content/graphic-design/akestam-holst-reklambyra/02-akestam-holst-reklambyra.jpg"
+    ],
     "price": "Ej till salu",
     "available": false,
+    "featured": false
+  },
+  {
+    "id": "arts-paintings",
+    "title": "Paintings and Fine Art",
+    "subtitle": "Collection of original paintings and artwork",
+    "description": "En samling av fria konstnärliga verk och illustrationer.",
+    "category": "art",
+    "image": "../content/arts/H1-arts.jpg",
+    "images": [
+      "../content/arts/H1-arts.jpg",
+      "../content/arts/01-arts.jpg",
+      "../content/arts/02-arts.jpg",
+      "../content/arts/03-arts.jpg"
+    ],
+    "price": "Varierar",
+    "available": true,
     "featured": false
   }
 ]

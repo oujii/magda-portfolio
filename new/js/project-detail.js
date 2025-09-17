@@ -72,10 +72,26 @@ function renderProjectDetail() {
                              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect width=%22500%22 height=%22400%22 fill=%22%23f0f0f0%22/%3E%3Ctext x=%22250%22 y=%22200%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2224%22%3EBild ej tillgänglig%3C/text%3E%3C/svg%3E'">
                     </div>
 
-                    <!-- Thumbnail gallery could be added here for multiple images -->
-                    <div class="thumbnail-gallery">
-                        <small class="text-muted">💡 Tips: Klicka på bilden för större version</small>
-                    </div>
+                    <!-- Thumbnail gallery for multiple images -->
+                    ${currentProject.images && currentProject.images.length > 1 ? `
+                        <div class="thumbnail-gallery">
+                            <div class="row">
+                                ${currentProject.images.slice(1).map((img, index) => `
+                                    <div class="col-3 mb-2">
+                                        <img src="${img}" alt="${currentProject.title} ${index + 2}"
+                                             class="img-fluid thumbnail-image"
+                                             onclick="changeMainImage('${img}')"
+                                             style="cursor: pointer; border-radius: 4px;">
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <small class="text-muted">💡 Tips: Klicka på bilderna för att se dem i större format</small>
+                        </div>
+                    ` : `
+                        <div class="thumbnail-gallery">
+                            <small class="text-muted">💡 Tips: Klicka på bilden för större version</small>
+                        </div>
+                    `}
                 </div>
             </div>
 
@@ -87,6 +103,7 @@ function renderProjectDetail() {
                     </div>
 
                     <h1 class="product-title">${currentProject.title}</h1>
+                    ${currentProject.subtitle ? `<p class="product-subtitle text-muted mb-3">${currentProject.subtitle}</p>` : ''}
 
                     <div class="product-price mb-4">
                         <span class="price-main">${currentProject.price || 'Kontakta för pris'}</span>
@@ -113,6 +130,7 @@ function renderProjectDetail() {
                             ${currentProject.materials ? `<li><strong>Material:</strong> ${currentProject.materials}</li>` : ''}
                             ${currentProject.dimensions ? `<li><strong>Storlek:</strong> ${currentProject.dimensions}</li>` : ''}
                             ${currentProject.year ? `<li><strong>År:</strong> ${currentProject.year}</li>` : ''}
+                            ${currentProject.awards ? `<li><strong>Utmärkelser:</strong> ${currentProject.awards.join(', ')}</li>` : ''}
                         </ul>
                     </div>
 
@@ -252,6 +270,13 @@ function showPurchaseModal(projectTitle) {
     const modalTitle = modal.querySelector('.modal-title');
     modalTitle.textContent = `Köp: ${projectTitle}`;
     $('#purchaseModal').modal('show');
+}
+
+function changeMainImage(imageSrc) {
+    const mainImage = document.querySelector('.product-main-image');
+    if (mainImage) {
+        mainImage.src = imageSrc;
+    }
 }
 
 function showError(message) {

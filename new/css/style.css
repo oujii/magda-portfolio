@@ -723,6 +723,21 @@ h1, h2, h3, .hero-title, .logo {
     margin-bottom: 50px;
 }
 
+.product-subtitle {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.thumbnail-gallery .thumbnail-image {
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.thumbnail-gallery .thumbnail-image:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
 .product-gallery {
     position: sticky;
     top: 120px;
