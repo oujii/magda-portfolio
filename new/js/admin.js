@@ -159,7 +159,10 @@ function loadProjectsList() {
 
         html += `
             <div class="project-row">
-                <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.src='data:image/svg+xml,<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"60\\" height=\\"60\\"><rect width=\\"60\\" height=\\"60\\" fill=\\"#f0f0f0\\"/><text x=\\"30\\" y=\\"35\\" text-anchor=\\"middle\\" fill=\\"#999\\">IMG</text></svg>'">
+                <div class="project-image-container">
+                    <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="image-placeholder" style="display: none; width: 60px; height: 60px; background: #f0f0f0; border-radius: 8px; align-items: center; justify-content: center; color: #999; font-size: 12px;">📷</div>
+                </div>
                 <div class="project-info">
                     <h6 class="project-title">${project.title}</h6>
                     <div class="project-meta">
@@ -248,8 +251,12 @@ function editProject(projectId) {
     document.getElementById('project-title').value = project.title;
     document.getElementById('project-category').value = project.category;
     document.getElementById('project-description').value = project.description;
+    document.getElementById('project-long-description').value = project.longDescription || '';
     document.getElementById('project-price').value = project.price || '';
     document.getElementById('project-image').value = project.image;
+    document.getElementById('project-materials').value = project.materials || '';
+    document.getElementById('project-dimensions').value = project.dimensions || '';
+    document.getElementById('project-year').value = project.year || '';
     document.getElementById('project-available').checked = project.available;
     document.getElementById('project-featured').checked = project.featured;
 
@@ -264,8 +271,12 @@ function saveProject() {
         title: document.getElementById('project-title').value,
         category: document.getElementById('project-category').value,
         description: document.getElementById('project-description').value,
+        longDescription: document.getElementById('project-long-description').value,
         price: document.getElementById('project-price').value,
         image: document.getElementById('project-image').value,
+        materials: document.getElementById('project-materials').value,
+        dimensions: document.getElementById('project-dimensions').value,
+        year: document.getElementById('project-year').value,
         available: document.getElementById('project-available').checked,
         featured: document.getElementById('project-featured').checked
     };

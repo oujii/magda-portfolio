@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Magda Korotynska - Portfolio</title>
+    <title id="page-title">Projektdetaljer - Magda Korotynska</title>
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 </head>
 
 <body class="body">
-    <!-- Top Bar för reklam -->
+    <!-- Top Bar -->
     <div id="top-bar" class="top-bar">
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-6 text-right">
                     <nav class="main-nav">
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
                         <a href="me.html" class="nav-link">Om mig</a>
                         <a href="contact.html" class="nav-link">Kontakt</a>
                         <div id="google_translate_element" class="translate-widget"></div>
@@ -60,34 +60,28 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h1 class="hero-title">Illustrationer & Design</h1>
-                        <p class="hero-subtitle">Böcker, kartor, tidskrifter och konstnärliga verk av Magda Korotynska</p>
-                    </div>
-                </div>
-            </section>
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Hem</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#portfolio">Portfolio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-title">Projekt</li>
+                </ol>
+            </nav>
 
-            <!-- Filter Section -->
-            <section id="portfolio" class="portfolio-section">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="filter-buttons text-center mb-4">
-                            <button class="filter-btn active" data-filter="all">Alla</button>
-                            <button class="filter-btn" data-filter="books">Böcker</button>
-                            <button class="filter-btn" data-filter="maps">Kartor</button>
-                            <button class="filter-btn" data-filter="magazines">Tidskrifter</button>
-                            <button class="filter-btn" data-filter="ads">Grafisk Design</button>
-                            <button class="filter-btn" data-filter="art">Konst</button>
-                        </div>
-                    </div>
+            <!-- Product Detail Section -->
+            <div class="product-detail-section" id="product-detail">
+                <!-- Content will be loaded by JavaScript -->
+                <div class="loading text-center py-5">
+                    <h3>Laddar projekt...</h3>
                 </div>
+            </div>
 
-                <!-- Portfolio Grid -->
-                <div class="row" id="portfolio-grid">
-                    <!-- Items will be loaded dynamically from projects.json -->
+            <!-- Related Projects -->
+            <section class="related-projects mt-5">
+                <h3>Liknande projekt</h3>
+                <div class="row" id="related-projects-grid">
+                    <!-- Will be populated by JavaScript -->
                 </div>
             </section>
         </div>
@@ -146,6 +140,6 @@
     <!-- Scripts -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
-    <script src="js/main.js"></script>
+    <script src="js/project-detail.js"></script>
 </body>
 </html>

@@ -136,11 +136,10 @@ function showPurchaseModal(projectTitle) {
     $('#purchaseModal').modal('show');
 }
 
-// Show project details (placeholder for future implementation)
+// Show project details
 function showProjectDetails(projectId) {
-    // For now, just scroll to top - in future this could open a detailed view
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    alert(`Visa detaljer för projekt: ${projectId}\n\nDenna funktionalitet kommer att implementeras senare.`);
+    // Navigate to project detail page
+    window.location.href = `project-detail.html?id=${projectId}`;
 }
 
 // Load top bar content

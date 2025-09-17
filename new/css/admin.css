@@ -318,6 +318,23 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
 }
 
+/* Enhanced textarea for long descriptions */
+#project-long-description {
+    font-family: 'Nunito', Arial, sans-serif;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.form-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.form-control:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
 .form-check-input:checked {
     background-color: var(--admin-primary);
     border-color: var(--admin-primary);

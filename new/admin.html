@@ -133,8 +133,15 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="project-description">Beskrivning *</label>
-                                            <textarea id="project-description" class="form-control" rows="3" required></textarea>
+                                            <label for="project-description">Kort beskrivning *</label>
+                                            <textarea id="project-description" class="form-control" rows="2" required placeholder="En kort beskrivning som visas i portfolion..."></textarea>
+                                            <small class="form-text text-muted">Visas på startsidan och i portfolion</small>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="project-long-description">Lång beskrivning</label>
+                                            <textarea id="project-long-description" class="form-control" rows="5" placeholder="Skriv en längre beskrivning som visas på projektets detaljsida...&#10;&#10;Använd dubbla radbrytningar för nya stycken."></textarea>
+                                            <small class="form-text text-muted">Visas på projektets detaljsida. Valfritt fält.</small>
                                         </div>
 
                                         <div class="row">
@@ -149,6 +156,27 @@
                                                     <label for="project-image">Bildsökväg *</label>
                                                     <input type="text" id="project-image" class="form-control" placeholder="../content/..." required>
                                                     <small class="form-text text-muted">Relativ sökväg till bilden</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="project-materials">Material</label>
+                                                    <input type="text" id="project-materials" class="form-control" placeholder="t.ex. Akvarell på papper">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="project-dimensions">Storlek</label>
+                                                    <input type="text" id="project-dimensions" class="form-control" placeholder="t.ex. 30x40 cm">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="project-year">År</label>
+                                                    <input type="text" id="project-year" class="form-control" placeholder="t.ex. 2024">
                                                 </div>
                                             </div>
                                         </div>
